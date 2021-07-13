@@ -16,7 +16,7 @@ import org.janusgraph.diskstorage.locking.PermanentLockingException
 import org.janusgraph.graphdb.configuration.GraphDatabaseConfiguration
 import org.janusgraph.graphdb.database.StandardJanusGraph
 import org.janusgraph.graphdb.relations.RelationIdentifier
-import org.janusgraph.graphdb.tinkerpop.optimize.JanusGraphStepStrategy
+import org.janusgraph.graphdb.tinkerpop.optimize.strategy.JanusGraphStepStrategy
 import org.slf4j.MDC
 import org.thp.scalligraph.auth.AuthContext
 import org.thp.scalligraph.janus.strategies._
@@ -498,8 +498,8 @@ class JanusDatabase(
       case Text.notContaining => JanusText.textContainsRegex(s".*${predicate.getValue}.*").negate().asInstanceOf[P[T]]
       //      case Text.endingWith      => JanusText.textRegex(s"${predicate.getValue}.*")
       //      case Text.notEndingWith   => JanusText.textRegex(s"${predicate.getValue}.*").negate()
-      case Text.startingWith    => JanusText.textPrefix(predicate.getValue)
-      case Text.notStartingWith => JanusText.textPrefix(predicate.getValue).negate()
+      case Text.startingWith    => JanusText.textPrefix(predicate.getValue).asInstanceOf[P[T]]
+      case Text.notStartingWith => JanusText.textPrefix(predicate.getValue).negate().asInstanceOf[P[T]]
       case _                    => predicate
     }
 

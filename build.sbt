@@ -11,7 +11,8 @@ crossScalaVersions in ThisBuild := supportedScalaVersions
 resolvers in ThisBuild ++= Seq(
   Resolver.mavenLocal,
   "Oracle Released Java Packages" at "https://download.oracle.com/maven",
-  "TheHive project repository" at "https://dl.bintray.com/thehive-project/maven/"
+  "TheHive project repository" at "https://dl.bintray.com/thehive-project/maven/",
+  "Sonatype Nexus Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 )
 scalacOptions in ThisBuild ++= Seq(
   "-encoding",

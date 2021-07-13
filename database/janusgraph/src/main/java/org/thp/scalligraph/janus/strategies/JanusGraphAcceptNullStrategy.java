@@ -19,7 +19,7 @@ import org.janusgraph.core.Cardinality;
 import org.janusgraph.core.JanusGraphTransaction;
 import org.janusgraph.core.PropertyKey;
 import org.janusgraph.graphdb.tinkerpop.ElementUtils;
-import org.janusgraph.graphdb.tinkerpop.optimize.HasStepFolder;
+import org.janusgraph.graphdb.tinkerpop.optimize.step.HasStepFolder;
 import org.janusgraph.graphdb.tinkerpop.optimize.JanusGraphTraversalUtil;
 import org.javatuples.Pair;
 

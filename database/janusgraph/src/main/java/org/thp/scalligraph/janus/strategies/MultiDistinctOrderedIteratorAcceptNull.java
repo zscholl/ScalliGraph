@@ -2,7 +2,7 @@ package org.thp.scalligraph.janus.strategies;
 
 import org.apache.tinkerpop.gremlin.structure.util.CloseableIterator;
 import org.apache.tinkerpop.gremlin.util.function.MultiComparator;
-import org.janusgraph.graphdb.tinkerpop.optimize.HasStepFolder.OrderEntry;
+import org.janusgraph.graphdb.tinkerpop.optimize.step.HasStepFolder.OrderEntry;
 
 import java.util.*;
 
